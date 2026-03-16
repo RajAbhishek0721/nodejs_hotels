@@ -3,6 +3,8 @@ const router=express.Router();
 const Person=require('./../models/Person');
 
 
+// CRUD operation for the  Person 
+
 // Post route to add a person
 router.post('/', async (req,res)=>{
     try{
