@@ -1,4 +1,5 @@
 # ignore noce_modules directory
-noce_modules/
+node_modules/
 
 # other enteries......
+Nodejs_Basics/
