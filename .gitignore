@@ -3,3 +3,4 @@ node_modules/
 
 # other enteries......
 Nodejs_Basics/
+.env
