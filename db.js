@@ -6,8 +6,8 @@ require('dotenv').config();
 // localhost = local machine
 // 27017 = default MongoDB port
 // hotelDB = database name
-// const mongoURL =process.env.MONGODB_URL_LOCAL;
-const mongoURL=process.env.MONGODB_URL;
+const mongoURL =process.env.MONGODB_URL_LOCAL;
+// const mongoURL=process.env.MONGODB_URL;
 
 
 // connect mongoose to MongoDB database
