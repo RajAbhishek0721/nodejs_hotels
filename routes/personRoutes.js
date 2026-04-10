@@ -131,7 +131,7 @@ router.get('/:workType', async(req,res)=>{
 
 // update the person details
 
-router.put('/:objectId', async (req,res)=>{
+router.put('/:objectId',jwtAuthMiddleware, async (req,res)=>{
     try{
         const personId=req.params.objectId;  //extract the person id from the url
         const updatedPersonData=req.body;   // updated data for the person
@@ -160,7 +160,7 @@ router.put('/:objectId', async (req,res)=>{
 
 // delete the person with the help of objectId
 
-router.delete('/:objectId',async (req,res)=>{
+router.delete('/:objectId',jwtAuthMiddleware,async (req,res)=>{
     try{
         const personId=req.params.objectId;
         const response = await Person.findByIdAndDelete(personId);
@@ -174,6 +174,8 @@ router.delete('/:objectId',async (req,res)=>{
 
     }
     catch(err){
+        console.log(err);
+        res.status(500).json({error:'Internal Server Error'});
 
     }
 })
