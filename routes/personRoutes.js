@@ -51,6 +51,7 @@ router.post('/login',async (req,res) =>{
             return res.status(401).json({error: 'Invalid username or password'});
         }
         // generate token
+        // if user exist and password match then create a payload for the token
         const payload={
             id:user.id,
             username:user.username
